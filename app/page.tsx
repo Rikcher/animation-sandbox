@@ -1,4 +1,4 @@
-import { HomePage } from '@views';
+import { HomePage } from '@views/Home';
 
 const Home = () => {
   return <HomePage />;

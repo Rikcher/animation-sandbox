@@ -22,7 +22,8 @@
     "paths": {
       "@/*": ["./*"],
       "@shared/*": ["./src/shared/*"],
-      "@views": ["./src/views"]
+      "@widgets/*": ["./src/widgets/*"],
+      "@views/*": ["./src/views/*"],
     }
   },
   "include": [
