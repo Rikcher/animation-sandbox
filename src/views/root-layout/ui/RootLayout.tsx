@@ -5,7 +5,7 @@ import '@/globals.css';
 import { cn } from '@shared/lib/utils';
 import { SvgSprite } from '@widgets/svg-sprite';
 import { getStaticParams } from '@shared/lib/i18n';
-import { RootLayoutHeader } from './RootLayoutHeader';
+import { RootLayoutHeader } from '../components/root-layout-header';
 
 const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mono' });
 
@@ -48,7 +48,7 @@ export const RootLayout = async (props: RootLayoutProps) => {
     >
       <body className="flex min-h-full flex-col">
         <RootLayoutHeader />
-        <main className="flex min-h-screen flex-1 flex-col items-center bg-black p-10 pt-[calc(var(--root-header-height)+(var(--spacing)*4))] font-sans">
+        <main className="flex min-h-screen flex-1 flex-col items-center p-10 pt-[calc(var(--root-header-height)+(var(--spacing)*4))] font-sans">
           {children}
         </main>
         <SvgSprite />
