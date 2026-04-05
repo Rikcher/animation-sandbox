@@ -1,18 +1,25 @@
 import { ShowcaseCard } from '@widgets/showcase-card';
 import type { AnimationToolType } from '@shared/types';
-import { useMemo } from 'react';
+import { getI18n } from '@shared/lib/i18n';
+import { setStaticParamsLocale } from 'next-international/server';
 
-export const HomePage = () => {
+type HomePageProps = { params: Promise<{ locale: string }> };
+
+export const HomePage = async (props: HomePageProps) => {
+  const { params } = props;
+  const { locale } = await params;
+  setStaticParamsLocale(locale);
+
+  const t = await getI18n();
+
   // TODO: remove later
   const types: AnimationToolType[] = ['threejs', 'sass', 'motion', 'gsap', 'animejs'];
 
-  const cards = useMemo(() => {
-    return Array.from({ length: 30 }, (_, i) => ({
-      id: i + 1,
-      content: `Card ${i + 1}`,
-      type: types[i % types.length],
-    }));
-  }, [types]);
+  const cards = Array.from({ length: 30 }, (_, i) => ({
+    id: i + 1,
+    content: t('card.name', { number: i + 1 }),
+    type: types[i % types.length],
+  }));
 
   return (
     <main className="flex min-h-screen flex-1 flex-col items-center justify-center bg-black font-sans">
