@@ -46,7 +46,9 @@ export const RootLayout = async (props: RootLayoutProps) => {
       )}
     >
       <body className="flex min-h-full flex-col">
-        {children}
+        <main className="flex min-h-screen flex-1 flex-col items-center justify-center bg-black font-sans">
+          {children}
+        </main>
         <SvgSprite />
       </body>
     </html>

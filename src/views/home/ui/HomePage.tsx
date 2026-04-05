@@ -22,14 +22,12 @@ export const HomePage = async (props: HomePageProps) => {
   }));
 
   return (
-    <main className="flex min-h-screen flex-1 flex-col items-center justify-center bg-black font-sans">
-      <div className="grid w-full max-w-360 grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-4 p-10">
-        {cards.map((card) => (
-          <ShowcaseCard key={card.id} type={card.type}>
-            {card.content}
-          </ShowcaseCard>
-        ))}
-      </div>
-    </main>
+    <div className="grid w-full max-w-360 grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-4 p-10">
+      {cards.map((card) => (
+        <ShowcaseCard key={card.id} type={card.type}>
+          {card.content}
+        </ShowcaseCard>
+      ))}
+    </div>
   );
 };
