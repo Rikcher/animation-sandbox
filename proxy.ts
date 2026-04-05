@@ -1,6 +1,6 @@
 import { createI18nMiddleware } from 'next-international/middleware';
 import { NextRequest } from 'next/server';
-import { LOCALES, DEFAULT_LOCALE } from '@shared/lib/i18n';
+import { LOCALES, DEFAULT_LOCALE } from '@shared/lib/i18n/config';
 
 const I18nMiddleware = createI18nMiddleware({
   locales: LOCALES,

@@ -4,7 +4,7 @@ import { Geist, Geist_Mono, JetBrains_Mono } from 'next/font/google';
 import '@/globals.css';
 import { cn } from '@shared/lib/utils';
 import { SvgSprite } from '@widgets/svg-sprite';
-import { getStaticParams } from '@shared/lib/i18n';
+import { getStaticParams } from '@shared/lib/i18n/server';
 import { RootLayoutHeader } from '../components/root-layout-header';
 
 const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mono' });
@@ -26,6 +26,7 @@ export const metadata: Metadata = {
 
 type RootLayoutProps = {
   children: ReactNode;
+  params: Promise<{ locale: string }>;
 };
 
 export function generateStaticParams() {
@@ -33,10 +34,12 @@ export function generateStaticParams() {
 }
 
 export const RootLayout = async (props: RootLayoutProps) => {
-  const { children } = props;
+  const { children, params } = props;
+  const { locale } = await params;
 
   return (
     <html
+      lang={locale}
       className={cn(
         'h-full',
         'antialiased',

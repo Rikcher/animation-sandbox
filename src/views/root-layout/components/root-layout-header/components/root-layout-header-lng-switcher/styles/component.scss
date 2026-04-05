@@ -1,39 +1,32 @@
-.root {
-  &[data-state="checked"] {
-    & .switcher {
-      animation: lng_switcher_right 0.7s ease-out both;
-    }
-
-    .en {
-      color: var(--foreground);
-    }
-
-    .ru {
-      color: var(--background);
-    }
+&:lang(ru) {
+  & .switcher {
+    animation: switcher_position_change_en_to_ru 0.7s ease-out both;
   }
 
-  &[data-state="unchecked"] {
-    & .switcher {
-      animation: lng_switcher_left 0.7s ease-out both;
-    }
+  & .enLocale {
+    animation: switcher_locale_color_change_ru_to_en 0.4s linear 0.2s both;
+  }
 
-    .en {
-      color: var(--background);
-    }
-
-    .ru {
-      color: var(--foreground);
-    }
+  & .ruLocale {
+    animation: switcher_locale_color_change_en_to_ru 0.4s linear 0.2s both;
   }
 }
 
-.en,
-.ru {
-  transition: color 0.4s linear 0.2s;
+&:lang(en) {
+  & .switcher {
+    animation: switcher_position_change_ru_to_en 0.7s ease-out both;
+  }
+
+  & .enLocale {
+    animation: switcher_locale_color_change_en_to_ru 0.4s linear 0.2s both;
+  }
+
+  & .ruLocale {
+    animation: switcher_locale_color_change_ru_to_en 0.4s linear 0.2s both;
+  }
 }
 
-@keyframes lng_switcher_right {
+@keyframes switcher_position_change_en_to_ru {
   0% {
     transform-origin: left center;
     transform: translateX(0) scaleX(1);
@@ -50,7 +43,7 @@
   }
 }
 
-@keyframes lng_switcher_left {
+@keyframes switcher_position_change_ru_to_en {
   0% {
     transform-origin: right center;
     transform: translateX(100%) scaleX(1);
@@ -64,5 +57,25 @@
   100% {
     transform-origin: right center;
     transform: translateX(0) scaleX(1);
+  }
+}
+
+@keyframes switcher_locale_color_change_ru_to_en {
+  0% {
+    color: var(--background);
+  }
+
+  100% {
+    color: var(--foreground);
+  }
+}
+
+@keyframes switcher_locale_color_change_en_to_ru {
+  0% {
+    color: var(--foreground);
+  }
+
+  100% {
+    color: var(--background);
   }
 }

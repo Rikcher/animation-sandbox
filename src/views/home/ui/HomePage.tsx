@@ -1,6 +1,6 @@
 import { ShowcaseCard } from '@widgets/showcase-card';
 import type { AnimationToolType } from '@shared/types';
-import { getI18n } from '@shared/lib/i18n';
+import { getI18n } from '@shared/lib/i18n/server';
 import { setStaticParamsLocale } from 'next-international/server';
 
 type HomePageProps = { params: Promise<{ locale: string }> };
