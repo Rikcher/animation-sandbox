@@ -1,5 +1,18 @@
 @use 'mixins' as moduleMixins;
 
+.root {
+  --switcher-animation-duration: 0s;
+  --locale-color-animation-duration: 0s;
+  --locale-color-animation-delay: 0s;
+}
+
+.root.root_animate {
+  --switcher-animation-duration: 0.7s;
+  --locale-color-animation-duration: 0.4s;
+  --locale-color-animation-delay: 0.2s;
+}
+
+
 &:lang(ru) {
   .switcher {
     @include moduleMixins.switcher-animation(switcher_position_change_en_to_ru);
@@ -28,16 +41,6 @@
   }
 }
 
-&:lang(ru),
-&:lang(en) {
-  .noAnimation {
-    & .switcher,
-    & .enLocale,
-    & .ruLocale {
-      animation-duration: 0s;
-    }
-  }
-}
 
 
 @keyframes switcher_position_change_en_to_ru {
