@@ -48,7 +48,7 @@ export const RootLayout = async (props: RootLayoutProps) => {
     >
       <body className="flex min-h-full flex-col">
         <RootLayoutHeader />
-        <main className="flex min-h-screen flex-1 flex-col items-center bg-black font-sans">
+        <main className="flex min-h-screen flex-1 flex-col items-center bg-black p-10 pt-[calc(var(--root-header-height)+(var(--spacing)*4))] font-sans">
           {children}
         </main>
         <SvgSprite />
