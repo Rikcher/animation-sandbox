@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { Card, CardContent } from '@shared/ui/shadcn';
+import { Card, CardContent, CardFooter } from '@shared/ui/shadcn';
 import type { AnimationToolType } from '@shared/types';
 import { AnimationToolLogo } from '@shared/ui/animation-tool-logo';
 
@@ -12,9 +12,11 @@ export const ShowcaseCard = (props: ShowcaseCardProps) => {
   const { type, children } = props;
 
   return (
-    <Card className="relative min-h-75">
-      <CardContent>{children}</CardContent>
-      <AnimationToolLogo className="absolute right-4 bottom-4" type={type} />
+    <Card className="relative flex min-h-75 flex-col">
+      <CardContent className="flex-1">{children}</CardContent>
+      <CardFooter className="flex h-10 items-end justify-end border-none p-2">
+        <AnimationToolLogo type={type} />
+      </CardFooter>
     </Card>
   );
 };
