@@ -1,0 +1,7 @@
+@mixin switcher-animation($name) {
+  animation: #{$name} 0.7s ease-out both;
+}
+
+@mixin locale-color-animation($name) {
+  animation: #{$name} 0.4s linear 0.2s both;
+}

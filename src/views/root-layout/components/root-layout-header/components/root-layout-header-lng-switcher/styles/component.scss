@@ -1,30 +1,44 @@
+@use 'mixins' as moduleMixins;
+
 &:lang(ru) {
-  & .switcher {
-    animation: switcher_position_change_en_to_ru 0.7s ease-out both;
+  .switcher {
+    @include moduleMixins.switcher-animation(switcher_position_change_en_to_ru);
   }
 
-  & .enLocale {
-    animation: switcher_locale_color_change_ru_to_en 0.4s linear 0.2s both;
+  .enLocale {
+    @include moduleMixins.locale-color-animation(switcher_locale_color_change_ru_to_en);
   }
 
-  & .ruLocale {
-    animation: switcher_locale_color_change_en_to_ru 0.4s linear 0.2s both;
+  .ruLocale {
+    @include moduleMixins.locale-color-animation(switcher_locale_color_change_en_to_ru);
   }
 }
 
 &:lang(en) {
-  & .switcher {
-    animation: switcher_position_change_ru_to_en 0.7s ease-out both;
+  .switcher {
+    @include moduleMixins.switcher-animation(switcher_position_change_ru_to_en);
   }
 
-  & .enLocale {
-    animation: switcher_locale_color_change_en_to_ru 0.4s linear 0.2s both;
+  .enLocale {
+    @include moduleMixins.locale-color-animation(switcher_locale_color_change_en_to_ru);
   }
 
-  & .ruLocale {
-    animation: switcher_locale_color_change_ru_to_en 0.4s linear 0.2s both;
+  .ruLocale {
+    @include moduleMixins.locale-color-animation(switcher_locale_color_change_ru_to_en);
   }
 }
+
+&:lang(ru),
+&:lang(en) {
+  .noAnimation {
+    & .switcher,
+    & .enLocale,
+    & .ruLocale {
+      animation-duration: 0s;
+    }
+  }
+}
+
 
 @keyframes switcher_position_change_en_to_ru {
   0% {

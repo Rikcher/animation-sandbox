@@ -8,7 +8,7 @@ import styles from '../index.module.scss';
 
 export const RootLayoutHeaderLngSwitcher = () => {
   const {
-    state: { isChecked, isDisabled },
+    state: { isChecked, isDisabled, shouldAnimate },
     actions: { handleLanguageChange, handleAnimationEnd },
   } = useRootLayoutHeaderLngSwitcher();
 
@@ -18,7 +18,10 @@ export const RootLayoutHeaderLngSwitcher = () => {
       checked={isChecked}
       onCheckedChange={handleLanguageChange}
       onAnimationEndCapture={handleAnimationEnd}
-      className="group/switch bg-background/85 focus-visible:border-ring focus-visible:ring-ring/50 relative flex inline-flex shrink-0 cursor-pointer items-center justify-center gap-14 overflow-hidden rounded-full border border-transparent px-4 py-2 transition-all outline-none focus-visible:ring-1"
+      className={cn(
+        !shouldAnimate && styles.noAnimation,
+        'group/switch bg-background/85 focus-visible:border-ring focus-visible:ring-ring/50 relative flex inline-flex shrink-0 cursor-pointer items-center justify-center gap-14 overflow-hidden rounded-full border border-transparent px-4 py-2 transition-all outline-none focus-visible:ring-1',
+      )}
     >
       <span
         className={cn(

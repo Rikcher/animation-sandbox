@@ -4,11 +4,13 @@ import { RootLayoutHeaderLngSwitcher } from '../components/root-layout-header-ln
 
 export const RootLayoutHeader = () => {
   return (
-    <header className="fixed z-999 flex h-(--root-header-height) w-full items-center justify-between gap-10 p-1 px-10 shadow-md backdrop-blur-xs">
-      <Link href="/about-project" className="text-foreground">
-        About Project
-      </Link>
-      <RootLayoutHeaderLngSwitcher />
+    <header className="fixed z-999 h-(--root-header-height) w-full shadow-md backdrop-blur-xs">
+      <nav className="mx-auto flex max-w-360 flex-1 items-center justify-between gap-10 p-1 px-10">
+        <Link href="/about-project" className="text-foreground">
+          About Project
+        </Link>
+        <RootLayoutHeaderLngSwitcher />
+      </nav>
     </header>
   );
 };
