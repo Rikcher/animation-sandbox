@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import { Geist, Geist_Mono, JetBrains_Mono } from 'next/font/google';
-import '@/globals.css';
+import '@/app/globals.css';
 import { cn } from '@shared/lib/utils';
 import { SvgSprite } from '@widgets/svg-sprite';
 import { getStaticParams } from '@shared/lib/i18n/server';
