@@ -1,5 +1,5 @@
 import { useChangeLocale, useCurrentLocale } from '@shared/lib/i18n/client';
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 export const useRootLayoutHeaderLngSwitcher = () => {
   const [isDisabled, setIsDisabled] = useState(true);
@@ -23,7 +23,10 @@ export const useRootLayoutHeaderLngSwitcher = () => {
   });
 
   const handleLanguageChange = () => {
-    sessionStorage.setItem('scrollPos', JSON.stringify({ x: window.scrollX, y: window.scrollY }));
+    sessionStorage.setItem(
+      'scrollPos',
+      JSON.stringify({ x: window.scrollX, y: window.scrollY }),
+    );
 
     sessionStorage.setItem('prevLocale', locale);
 

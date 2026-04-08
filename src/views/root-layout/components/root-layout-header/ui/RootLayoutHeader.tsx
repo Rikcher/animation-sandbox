@@ -1,7 +1,6 @@
-import React from 'react';
+import { getI18n } from '@shared/lib/i18n/server';
 import Link from 'next/link';
 import { RootLayoutHeaderLngSwitcher } from '../components/root-layout-header-lng-switcher';
-import { getI18n } from '@shared/lib/i18n/server';
 
 export const RootLayoutHeader = async () => {
   const t = await getI18n();

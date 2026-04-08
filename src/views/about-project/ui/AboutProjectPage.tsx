@@ -1,4 +1,3 @@
-import React from 'react';
 import { getI18n } from '@shared/lib/i18n/server';
 import { setStaticParamsLocale } from 'next-international/server';
 

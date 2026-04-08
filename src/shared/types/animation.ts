@@ -1,1 +1,6 @@
-export type AnimationToolType = 'motion' | 'gsap' | 'threejs' | 'animejs' | 'sass';
+export type AnimationToolType =
+  | 'motion'
+  | 'gsap'
+  | 'threejs'
+  | 'animejs'
+  | 'sass';

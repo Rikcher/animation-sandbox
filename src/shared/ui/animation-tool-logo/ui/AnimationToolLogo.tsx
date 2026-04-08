@@ -1,7 +1,6 @@
-import React from 'react';
 import type { AnimationToolType } from '@shared/types';
-import { animationToolLogoMap } from '../model/animationToolLogoMap';
 import { Icon } from '@shared/ui/icon';
+import { animationToolLogoMap } from '../model/animationToolLogoMap';
 
 type AnimationToolLogoProps = {
   type: AnimationToolType;

@@ -1,7 +1,7 @@
-import React, { ReactNode } from 'react';
-import { Card, CardContent, CardFooter } from '@shared/ui/card';
 import type { AnimationToolType } from '@shared/types';
 import { AnimationToolLogo } from '@shared/ui/animation-tool-logo';
+import { Card, CardContent, CardFooter } from '@shared/ui/card';
+import type { ReactNode } from 'react';
 
 type ShowcaseCardProps = {
   type: AnimationToolType;

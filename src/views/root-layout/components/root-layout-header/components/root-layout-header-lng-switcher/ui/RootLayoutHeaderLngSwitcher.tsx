@@ -1,10 +1,9 @@
 'use client';
 
-import React from 'react';
 import { cn } from '@shared/lib/utils';
 import { Checkbox as CheckboxPrimitive } from 'radix-ui';
-import { useRootLayoutHeaderLngSwitcher } from '../model/useRootLayoutHeaderLngSwitcher';
 import styles from '../index.module.scss';
+import { useRootLayoutHeaderLngSwitcher } from '../model/useRootLayoutHeaderLngSwitcher';
 
 export const RootLayoutHeaderLngSwitcher = () => {
   const {
@@ -30,8 +29,12 @@ export const RootLayoutHeaderLngSwitcher = () => {
           'bg-foreground absolute inset-[calc(var(--spacing)*2)_50%_calc(var(--spacing)*2)_calc(var(--spacing)*2)] rounded-full transition-all duration-300',
         )}
       />
-      <span className={cn(styles.enLocale, 'relative text-sm font-bold')}>en</span>
-      <span className={cn(styles.ruLocale, 'relative text-sm font-bold')}>ru</span>
+      <span className={cn(styles.enLocale, 'relative text-sm font-bold')}>
+        en
+      </span>
+      <span className={cn(styles.ruLocale, 'relative text-sm font-bold')}>
+        ru
+      </span>
     </CheckboxPrimitive.Root>
   );
 };

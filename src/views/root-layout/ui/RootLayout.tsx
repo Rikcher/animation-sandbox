@@ -1,13 +1,16 @@
 import type { Metadata } from 'next';
-import type { ReactNode } from 'react';
 import { Geist, Geist_Mono, JetBrains_Mono } from 'next/font/google';
+import type { ReactNode } from 'react';
 import '@/app/globals.css';
+import { getStaticParams } from '@shared/lib/i18n/server';
 import { cn } from '@shared/lib/utils';
 import { SvgSprite } from '@widgets/svg-sprite';
-import { getStaticParams } from '@shared/lib/i18n/server';
 import { RootLayoutHeader } from '../components/root-layout-header';
 
-const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mono' });
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: '--font-mono',
+});
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
