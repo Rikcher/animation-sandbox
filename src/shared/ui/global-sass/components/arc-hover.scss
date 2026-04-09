@@ -1,0 +1,18 @@
+.arc-hover {
+  position: relative;
+  overflow: visible;
+
+  &:before {
+    position: absolute;
+    content: '';
+  }
+}
+
+.arc-hover-card {
+  @extend .arc-hover;
+
+  &:before {
+    inset: -70px -62px;
+    clip-path: shape(from 85.36% 82.17%,curve to 82.17% 85.36% with 85.36% 85.36%,line to 17.83% 85.36%,curve to 14.64% 82.17% with 14.64% 85.36%,line to 14.64% 17.83%,curve to 17.83% 14.64% with 14.64% 14.64%,line to 82.17% 14.64%,curve to 85.36% 17.83% with 85.36% 14.64%,line to 85.36% 82.17%,line to calc(85.36% - 1.41px) calc(17.83% - -1.29px),curve to calc(82.17% - 1.29px) calc(14.64% - -1.41px) with calc(85.36% - 1.41px) calc(14.64% - -1.41px),line to calc(17.83% - -1.29px) calc(14.64% - -1.41px),curve to calc(14.64% - -1.41px) calc(17.83% - -1.29px) with calc(14.64% - -1.41px) calc(14.64% - -1.41px),line to calc(14.64% - -1.41px) calc(82.17% - 1.29px),curve to calc(17.83% - -1.29px) calc(85.36% - 1.41px) with calc(14.64% - -1.41px) calc(85.36% - 1.41px),line to calc(82.17% - 1.29px) calc(85.36% - 1.41px),curve to calc(85.36% - 1.41px) calc(82.17% - 1.29px) with calc(85.36% - 1.41px) calc(85.36% - 1.41px),line to calc(85.36% - 1.41px) calc(17.83% - -1.29px));
+  }
+}

@@ -28,7 +28,7 @@ export const HomePage = async (props: HomePageProps) => {
   }));
 
   return (
-    <div className="grid w-full max-w-360 grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-4">
+    <div className="grid w-full max-w-360 grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-x-6 gap-y-8">
       {cards.map((card) => (
         <ShowcaseCard key={card.id} type={card.type}>
           {card.content}

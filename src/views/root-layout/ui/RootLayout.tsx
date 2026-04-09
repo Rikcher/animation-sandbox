@@ -4,6 +4,7 @@ import type { ReactNode } from 'react';
 import '@/app/globals.css';
 import { getStaticParams } from '@shared/lib/i18n/server';
 import { cn } from '@shared/lib/utils';
+import '@shared/ui/global-sass/index.scss';
 import { SvgSprite } from '@widgets/svg-sprite';
 import { RootLayoutHeader } from '../components/root-layout-header';
 
