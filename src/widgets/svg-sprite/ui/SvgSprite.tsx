@@ -79,5 +79,17 @@ export const SvgSprite = () => (
         d="M67.874 102.283 57.15 58.818l43.008 12.346zM46.422 15.406 57.146 58.87 14.138 46.525zm86.012 24.777 10.724 43.465-43.008-12.346zm-64.555 62.13 10.724 43.465-43.008-12.346z"
       />
     </symbol>
+    <symbol
+      id="project-logo"
+      viewBox="0 0 78 30"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect width="30" height="30" rx="4" fill="#4B4940" />
+      <rect x="12" width="30" height="30" rx="4" fill="#787462" />
+      <rect x="24" width="30" height="30" rx="4" fill="#A59F84" />
+      <rect x="36" width="30" height="30" rx="4" fill="#D2CAA6" />
+      <rect x="48" width="30" height="30" rx="4" fill="#FFF5C8" />
+    </symbol>
   </svg>
 );
